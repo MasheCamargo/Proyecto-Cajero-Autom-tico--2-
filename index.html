@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>Cajero automático</title>
+  </head>
+  <body>
+    <h1 class="title">Cajero Automático</h1>
+    <p class="recomendation">
+      *Le recordamos, es importante no aceptar ayuda de terceros, su contraseña
+      es personal.*
+    </p>
+    <div id="login" class="login">
+      <h2>Seleccionar cuenta</h2>
+      <div class="container">
+        <select id="accounts" class="accounts">
+          <option value="0">Persona 1</option>
+          <option value="1">Persona 2</option>
+          <option value="2">Persona 3</option>
+        </select>
+        <input
+          type="password"
+          id="password"
+          placeholder="Contraseña"
+          class="password"
+        />
+      </div>
+      <button onclick="login()" class="btn_login">Ingresar</button>
+      <p id="message" class="message"></p>
+    </div>
+    <div id="operations" style="display: none" class="operations">
+      <h2 id="user_account" class="user_account"></h2>
+      <div class="list_options">
+        <button onclick="checkBalance()">Consultar saldo</button>
+        <button onclick="enterAmount()">Ingresar saldo</button>
+        <button onclick="withdrawAmount()">Retirar saldo</button>
+      </div>
+      <p id="balance" class="balance" style="display: none"></p>
+      <div id="transactions" class="transactions">
+        <h3>Transacciones</h3>
+        <ul id="history" class="history"></ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
